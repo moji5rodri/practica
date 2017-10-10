@@ -1,0 +1,31 @@
+class Venta {
+	constructor(producto, cantidad, precio) {
+      this.producto = producto;
+      this.cantidad = cantidad;
+      this.precio = precio;
+    }
+  
+  	getProducto(){
+      return this.producto;
+    }
+  
+  	getCantidad(){
+      return this.cantidad;
+    }
+  
+  	getPrecio(){
+      return this.precio;
+    }
+  
+  	getCosto(){
+      return (this.cantidad * this.precio);
+    }
+  
+  	getGanancia(){
+      return (this.getCosto() * 0.1);
+    }
+}
+
+const venta1 = new Venta( "1kg Azucar", 1, 2);
+const venta2 = new Venta( "Aceite", 3, 4);
+console.log(`${venta1.getProducto()
